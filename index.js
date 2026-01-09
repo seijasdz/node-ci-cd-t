@@ -4,8 +4,6 @@ const MESSAGE = process.env.MESSAGE || 'Hello, World!';
 
 const app = express();
 
-throw new Error('Intentional Error for Testing');
-
 app.get('/', (_req, res) => {
     res.send(MESSAGE);
 })
