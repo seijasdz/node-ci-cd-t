@@ -1,12 +1,12 @@
 const express = require('express');
+const PORT = process.env.PORT || 3000;
+const MESSAGE = process.env.MESSAGE || 'Hello, World!';
 
 const app = express();
 
 app.get('/', (_req, res) => {
-    res.send("Hello from elastic beanstalk! After GH Act");
+    res.send(MESSAGE);
 })
-
-const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
